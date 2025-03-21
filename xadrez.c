@@ -15,6 +15,8 @@ int main() {
     const int movimentacaoBispo = 5; //Bispo: 5 casas na diagonal superior direita
     const int movimentacaoTorre = 5; //Torre: 5 casas para a direita
     const int movimentacaoRainha = 8; //Rainha: 8 casas para a esquerda
+    const int primeiroMovimentoCavalo = 2;
+    const int segundoMovimentoCavalo = 1;
 
     int movimentarPeca;
     int programaRodando = 1;
@@ -26,6 +28,7 @@ while (programaRodando)
     printf("1. MOVER BISPO\n");
     printf("2. MOVER TORRE\n");
     printf("3. MOVER RAINHA\n");
+    printf("4. MOVER CAVALO\n");
     printf("0. SAIR DO JOGO\n");
     printf("ESCOLHA UMA OPCAO:");
     scanf("%d", &movimentarPeca);
@@ -34,7 +37,7 @@ while (programaRodando)
 
 
     switch (movimentarPeca){
-    case 1:
+    case 1:{
         // Implementação de Movimentação do Bispo
         // Sugestão: Utilize uma estrutura de repetição para simular a movimentação do Bispo em diagonal.
         int iteracaoBispo = 1;
@@ -45,9 +48,9 @@ while (programaRodando)
             printf("ITERACAO: %d\n", iteracaoBispo);
             iteracaoBispo++;
         }
-        break;
+        break;}
 
-    case 2:
+    case 2:{
         // Implementação de Movimentação da Torre
         // Sugestão: Utilize uma estrutura de repetição para simular a movimentação da Torre para a direita.
         int iteracaoTorre = 1;
@@ -57,7 +60,7 @@ while (programaRodando)
             printf("ITERACAO: %d\n", iteracaoTorre);
             iteracaoTorre++;
         } while (iteracaoTorre <= movimentacaoTorre);
-        break;
+        break;}
 
     case 3:
         // Implementação de Movimentação da Rainha
@@ -68,6 +71,27 @@ while (programaRodando)
             printf("ITERACAO: %d\n", iteracaoRainha);
         }
         break;
+
+    case 4:
+        // Nível Aventureiro
+        //Implementando a lógica de movimentação do cavalo
+        // Uso de loop aninhado
+        for (int i = 1; i <= segundoMovimentoCavalo; i++){
+            // Segundo loop
+            int j = 1;
+            while (j <= primeiroMovimentoCavalo){
+                printf("CAVALO SE MOVE PARA: ");
+                printf("BAIXO\n");
+                printf("ITERACAO: %d\n", j);
+                j++;
+            }
+
+            printf("CAVALO SE MOVE PARA: ");
+            printf("ESQUERDA \n");
+            printf("ITERACAO: %d\n", i);
+        }
+        break;
+
     
     case 0:
         // Encerra o programa

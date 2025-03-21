@@ -1,0 +1,14 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Compilar e executar",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${fileDirname}/${fileBasenameNoExtension}.exe",
+            "preLaunchTask": "C/C++: gcc arquivo de build ativo",
+            "cwd": "${workspaceFolder}",
+            "MIMode": "gdb"
+        }
+    ]
+}
